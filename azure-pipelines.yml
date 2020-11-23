@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'bddf3c59-769c-49a7-a515-6310ce264e6a'
+  azureSubscription: '0c8ea8b5-7795-44af-aa65-70f0016121c6'
 
   # Function app name
   functionAppName: 'DiocamFunctionApp'
