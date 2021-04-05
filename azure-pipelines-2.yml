@@ -40,5 +40,4 @@ steps:
       # Write your PowerShell commands here.
       
       Write-Host "Hello World"
-      Write-Host "Hello World x2"
       Stop-AzureRmWebAppSlot -ResourceGroupName "diocamStopSlot" -Name "diocamStopSlot" -Slot "mytest"
