@@ -32,3 +32,12 @@ steps:
  #   azureSubscription: "diocamStopSlot"
   #  Action: "Stop Azure App Service"
   #  WebAppName: 'dioc
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Hello World"
+      Stop-AzureRmWebAppSlot -ResourceGroupName "diocamStopSlot" -Name "diocamStopSlot" -Slot "mytest"
