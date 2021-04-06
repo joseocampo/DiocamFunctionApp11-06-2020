@@ -20,22 +20,19 @@ steps:
     Action: "Stop Azure App Service"
     WebAppName: 'diocamStopSlot'
 
-#- task: PowerShell@2
-#  inputs:
-#    targetType: 'filePath'
-#    filePath: $(System.DefaultWorkingDirectory)\test1.ps1
-#  displayName: 'Print Hello World'
 
-#- task: AzureAppServiceManage@0
- # displayName: "Stopping App Service Slot"
- # inputs:
- #   azureSubscription: "diocamStopSlot"
-  #  Action: "Stop Azure App Service"
-  #  WebAppName: 'dioc
-
-- task: AzureCLI@2
+- task: AzureAppServiceManage@0
   inputs:
     azureSubscription: 'diocamStopSlot'
-    scriptType: 'ps'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az resource invoke-action --action stop --ids  /subscriptions/90d7af21-b3a1-4bf8-a149-8e1fcc47e337/resourceGroups/diocamStopSlot/providers/Microsoft.Web/sites/diocamStopSlot/slots/mytest'
+    Action: 'Stop Azure App Service'
+    WebAppName: 'diocamStopSlot'
+    SpecifySlotOrASE: true
+    ResourceGroupName: 'diocamStopSlot'
+    Slot: 'mytest'
+
+#- task: AzureCLI@2
+#  inputs:
+#    azureSubscription: 'diocamStopSlot'
+#    scriptType: 'ps'
+#    scriptLocation: 'inlineScript'
+#    inlineScript: 'az resource invoke-action --action stop --ids  /subscriptions/90d7af21-b3a1-4bf8-a149-8e1fcc47e337/resourceGroups/diocamStopSlot/providers/Microsoft.Web/sites/diocamStopSlot/slots/mytest'
