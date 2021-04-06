@@ -27,7 +27,7 @@ steps:
     Action: 'Stop Azure App Service'
     WebAppName: 'diocamStopSlot'
     SpecifySlotOrASE: true
-#    ResourceGroupName: 'diocamStopSlot'
+    ResourceGroupName: 'diocamStopSlot'
     Slot: 'mytest'
 
 #- task: AzureCLI@2
